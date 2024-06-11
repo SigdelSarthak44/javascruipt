@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let a = Number(prompt("Enter a"))
+        let b = Number(prompt("Enter b"))
+        let o = prompt("Choose "+","-","*" or "/" ")
+        switch(o){
+
+            case "+": 
+                document.write("sum: ", " ", a+b)
+                break
+                case "*":
+                document.write("product: ", " ", a*b)
+                break
+                case "/":
+                document.write("division: ", " ", a/b)
+                document.write("mod", a%b)
+                break
+                case "-":
+                docuemt.write("subtract"," ", a-b)
+                break
+                default:
+                    docuemt.write("<i><b>INVALID OPTION</b></i>")      
+             
+             }
+    </script>
+</body>
+</html>
