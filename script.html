@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onmouseover="show_date()" onmouseleave="hide()">Show date</button>
+        <h1 id="time"></h1>
+        
+    <script>
+        function show_date(){
+        let today = new Date()
+        let date_today = today.toLocaleDateString()
+        let time_today = today.toLocaleTimeString()
+        document.getElementById('time').innerHTML= today + "<Br>" + date_today + "<br>" + time_today
+        }
+        // function hide(){
+        //     document.getElementById('time').innerHTML=" "
+        // }
+        function hide(){
+            document.getElementById('time').innerHTML=" "
+        }
+    </script>
+</body>
+</html>

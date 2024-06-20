@@ -7,16 +7,16 @@
 </head>
 <body>
     
-    <img src="download.jpg" alt="" width="400px" height="400px" onmouseover="switchon()" onmouseout="switchoff()">
+    <img src="off.jpg" alt="" width="400px" height="400px" onmouseover="switchon()" onmouseout="switchoff()">
     <button onclick="switchon()">On</button>
     <button onclick="switchoff()">Off</button>
 
     <script>
        function switchon(){
-         document.querySelector('img').src = "download.png"
+         document.querySelector('img').src = "on.webp"
        }
        function switchoff(){
-        document.querySelector('img').src="download.jpg"
+        document.querySelector('img').src="off.jpg"
        }
     </script>
 
