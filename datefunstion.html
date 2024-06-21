@@ -6,9 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="time">
-        <button onclick="show_date">Show Date</button>
-    </h1>
+    <h1 id="time"></h1>
+        <button onmouseover="show_date()" onmouseleave="show_hide()">Show Date</button>
    <script>
 function show_date(){
 //     let today = new Date()
@@ -28,11 +27,15 @@ function show_date(){
 //     document.write("<br>Second:",ss)
 //     document.write("<br>Milli Second:",ms,"<BR>")
 
-    // let date_today2 = today.toLocaleDateString()
-    // let time_now2 = today.toLocaleTimeString()
+    let date_today = today.toLocaleDateString()
+    let time_now = today.toLocaleTimeString()
     
-    document.write("<br>Date:",date_today2,"<br>")
-    document.write("<br>Time:",time_now2)
+    document.getElementById('time').innerHTML=
+    document.write("<br>Date:",date_today,"<br>")
+    document.write("<br>Time:",time_now)
+}
+function show_hide(){
+    document.write('time')
 }
    </script> 
 </body>
