@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        function add() {
+            let n = Number(prompt("Enter the value of n"))
+            let a = 1
+            let sum = 0
+            for (i = 1; i <= n; i++) {
+                sum = sum + a
+                a = a + 3
+            }
+            document.write("The sum of n number of terms is :", sum)
+        }
+        add()
+
+    </script>
+</body>
+
+</html>

@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <button onclick="roll()">Roll the dice</button>
     <h1 id="Player1"></h1>
     <h1 id="Player2"></h1>
     <h1 id="result"></h1>
     <script>
-        function roll(){
-        let r1 = Math.random()*6
-        let r2 = Math.random()*6
-        let dice1 = Math.ceil(r1)
-        let dice2 = Math.ceil(r2)
-        document.getElementById('Player1').innerHTML= "Player1 =" + dice1
-        document.getElementById('Player2').innerHTML= "Player2 =" + dice2
-        if (dice1>dice2){
-            document.getElementById('result').innerHTML="Player1 wins"
+        function roll() {
+            let r1 = Math.random() * 6
+            let r2 = Math.random() * 6
+            let dice1 = Math.ceil(r1)
+            let dice2 = Math.ceil(r2)
+            document.getElementById('Player1').innerHTML = "Player1 =" + dice1
+            document.getElementById('Player2').innerHTML = "Player2 =" + dice2
+            if (dice1 > dice2) {
+                document.getElementById('result').innerHTML = "Player1 wins"
+            }
+            else if (dice1 < dice2) {
+                document.getElementById('result').innerHTML = "Player2 wins."
+            }
+            else {
+                document.getElementById('result').innerHTML = "Roll again."
+            }
         }
-        else if (dice1<dice2){
-            document.getElementById('result').innerHTML="Player2 wins." 
-        }
-        else{
-            document.getElementById('result').innerHTML="Roll again."
-        }
-        }
-    </script> 
+    </script>
 </body>
+
 </html>

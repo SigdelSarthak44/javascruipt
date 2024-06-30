@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea id="input" onkeyup="countword()"></textarea>
+    <div id="word_count"></div>
+    <script>
+        function countword() {
+            let input_text = document.getElementById("input").value
+            let words = input_text.split(" ")
+            let sentences = input_text.split(" ")
+            let sentence_count = sentences.length - 1
+            let word_count = words.length
+            document.getElementById("word_count").innerHTML = "Word Count = " + word_count
+        }
+    </script>
+</body>
+
+</html>

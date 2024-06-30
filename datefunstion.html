@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1 id="time"></h1>
-        <button onmouseover="show_date()" onmouseleave="show_hide()">Show Date</button>
-   <script>
-function show_date(){
-//     let today = new Date()
-//     document.write(today)
-//     let yy = today.getFullYear()
-//     let mm = today.getMonth()
-//     let day = today.getDay()
-//     let hh = today.getHours()
-//     let min = today.getMinutes()
-//     let ss = today.getSeconds()
-//     let ms = today.getMilliseconds()
-//     document.write("<br>Year:",yy)
-//     document.write("<br>Month:",mm)
-//     document.write("<br>Day:",day)
-//     document.write("<br>Hour:",hh)
-//     document.write("<br>Minuted:",min)
-//     document.write("<br>Second:",ss)
-//     document.write("<br>Milli Second:",ms,"<BR>")
+    <button onmouseover="show_date()" onmouseleave="show_hide()">Show Date</button>
+    <script>
+        function show_date() {
+            //     let today = new Date()
+            //     document.write(today)
+            //     let yy = today.getFullYear()
+            //     let mm = today.getMonth()
+            //     let day = today.getDay()
+            //     let hh = today.getHours()
+            //     let min = today.getMinutes()
+            //     let ss = today.getSeconds()
+            //     let ms = today.getMilliseconds()
+            //     document.write("<br>Year:",yy)
+            //     document.write("<br>Month:",mm)
+            //     document.write("<br>Day:",day)
+            //     document.write("<br>Hour:",hh)
+            //     document.write("<br>Minuted:",min)
+            //     document.write("<br>Second:",ss)
+            //     document.write("<br>Milli Second:",ms,"<BR>")
 
-    let date_today = today.toLocaleDateString()
-    let time_now = today.toLocaleTimeString()
-    
-    document.getElementById('time').innerHTML=
-    document.write("<br>Date:",date_today,"<br>")
-    document.write("<br>Time:",time_now)
-}
-function show_hide(){
-    document.write('time')
-}
-   </script> 
+            let date_today = today.toLocaleDateString()
+            let time_now = today.toLocaleTimeString()
+
+            document.getElementById('time').innerHTML =
+                document.write("<br>Date:", date_today, "<br>")
+            document.write("<br>Time:", time_now)
+        }
+        function show_hide() {
+            document.write('time')
+        }
+    </script>
 </body>
+
 </html>
