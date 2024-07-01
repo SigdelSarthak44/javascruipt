@@ -1,0 +1,54 @@
+.container{
+    display: flex;
+    border: 12px;
+    border-color: black;
+    border-radius: 5px;
+}
+.b:hover{
+    background-color: black;
+    width: 400px;
+    font-size: 30px;
+    color: white;
+}
+.b{
+    background-color: greenyellow;
+    width: 400px;
+    font-size: 30px;
+}
+svg{
+    width: 50px;
+    height: 50px;
+}
+.address{
+    display: flex;
+}
+.demo4{
+    display: flex;
+}
+.email{
+    display: flex;
+}
+.hh{
+    color: yellowgreen;
+}
+.great{
+    display: flex;
+}
+.demo2{
+    display: flex;
+}
+.demoall{
+    display: flex;
+}
+*{
+    padding-right: 20px;
+}
+.add{
+    color: yellowgreen;
+}
+.ph{
+    color: greenyellow;
+}
+.e{
+    color: greenyellow;
+}
