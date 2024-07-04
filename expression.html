@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="name">Name</label>
+        <br>
+        <input type="text" id="name" name="fname" onkeyup="name_validate()"><span id="namemsg" ></span>
+        <br>
+        <label for="Phone">Phone</label>
+        <br>
+        <input type="text" id="Phone" onkeyup="phone_validate()"><span id="phmsg"></span>
+        <br>
+        <label for="Email">Email</label>
+        <br>
+        <input type="text" id="Email" onkeyup="validate_email()"><span id="mailmsg"></span>
+        <br>
+        <label for="Password">Password</label>
+        <br>
+        <input type="text" id="Password" onkeyup="pass_validate()"><span id="passmsg"></span>
+        <br>
+        <button>Submit</button>
+    </form>
+    <script>
+        function name_validate(){
+            let fullname = document.getElementById('name').value
+            if(!fullname.match(/^[a-z]{3,}$/)){
+                namemsg.innerHTML="Name must be only alphabates and at least 3 characters."
+                namemsg.style.color="red"
+            }
+            else{
+                namemsg.innerHTML = "Valid name"
+                namemsg.style.color="green"
+            }
+        }
+        function phone_validate(){
+            let phnumber = document.getElementById('Phone').value
+            if(!phnumber.match(/^[0-9]{10,}$/)){
+                phmsg.innerHTML="Phone number must be a number and at least 10 numbers. "
+                phmsg.style.color="red"
+            }
+            else{
+                phmsg.innerHTML="The number is valid"
+                phmsg.style.color="green"
+            }
+        }
+        function validate_email(){
+            let fullmail = document.getElementById('Email').value
+            if(!fullmail.match(/^[a-z][a-z.0-9]+[@][a-z]+[.](com)$/)){
+                mailmsg.innerHTML="The Email entered is not vaild."
+                mailmsg.style.color="red"
+            }
+            else{
+                mailmsg.innerHTML="The mail is valid"
+                mailmsg.style.color="green"
+            }
+        }
+        
+        function pass_validate(){
+            let pwd = document.getElementById('Password')
+            if(!pwd.match(/[a-z]/)){
+                passmsg = "password must contain at least 1 lowercase, 1 uppercase alphabate"
+                passmsg.style.color="red"
+            }
+            elseif(!pwd.match(/[A-Z]/))
+            {
+                passmsg = "Password must contain 1 lower case and 1 upper case."
+                passmsg.style.color = "Red"
+            }
+            elseif(!pwd.match(/[0-9]/))
+            {
+                passmsg = "password Must contain alphabate both upper case and lower case with a symbol."
+                passmsg.style.color = "red"
+            }
+            elseif(!pwd.match(/[@][!][1][&][^]/))
+            {
+                passmsg = "the letter must contain alphabates and numbers."
+                passmsg.style.color = "red"
+            }
+        }
+    </script>
+</body>
+
+</html>
