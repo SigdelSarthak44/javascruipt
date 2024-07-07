@@ -16,19 +16,19 @@
     <form>
         <label for="name">Name</label>
         <br>
-        <input type="text" id="name" name="fname" onkeyup="name_validate()"><span id="namemsg" ></span>
+        <input type="text" id="name" name="fname" onkeyup="name_validate()"><span id="namemsg"> </span>
         <br>
         <label for="Phone">Phone</label>
         <br>
-        <input type="text" id="Phone" onkeyup="phone_validate()"><span id="phmsg"></span>
+        <input type="text" id="Phone" onkeyup="phone_validate()"><span id="phmsg" ></span>
         <br>
         <label for="Email">Email</label>
         <br>
-        <input type="text" id="Email" onkeyup="validate_email()"><span id="mailmsg"></span>
+        <input type="text" id="Email" onkeyup="validate_email()"><span id="mailmsg"> </span>
         <br>
         <label for="Password">Password</label>
         <br>
-        <input type="text" id="Password" onkeyup="pass_validate()"><span id="passmsg"></span>
+        <input type="text" id="Password" onkeyup="pass_validate()"><span id="passmsg"> </span>
         <br>
         <button>Submit</button>
     </form>
@@ -68,25 +68,34 @@
         }
         
         function pass_validate(){
-            let pwd = document.getElementById('Password')
+            let pwd = document.getElementById('Password').value
             if(!pwd.match(/[a-z]/)){
-                passmsg = "password must contain at least 1 lowercase, 1 uppercase alphabate"
+                passmsg.innerHTML = "password must contain at least 1 lowercase,e"
                 passmsg.style.color="red"
             }
-            elseif(!pwd.match(/[A-Z]/))
+            else if(!pwd.match(/[A-Z]/))
             {
-                passmsg = "Password must contain 1 lower case and 1 upper case."
+                passmsg.innerHTML = "Password must contain 1 upper case."
                 passmsg.style.color = "Red"
             }
-            elseif(!pwd.match(/[0-9]/))
+            else if(!pwd.match(/[0-9]/))
             {
-                passmsg = "password Must contain alphabate both upper case and lower case with a symbol."
+                passmsg.innerHTML = "password Must contain at least 1 number."
                 passmsg.style.color = "red"
             }
-            elseif(!pwd.match(/[@][!][1][&][^]/))
+            else if(!pwd.match(/[@#$%^+]/))
             {
-                passmsg = "the letter must contain alphabates and numbers."
+                passmsg.innerHTML= "the letter must contain at least 1 special character."
                 passmsg.style.color = "red"
+            }
+            else if(!pwd.match(/.{8,}/))
+            {
+                passmsg.innerHTML= "password must be at least 8 characters"
+                passmsg.style.color = "red"
+            }
+            else{
+                passmsg.innerHTML = "The password is Valid according to the rules."
+                passmsg.style.color = "green"
             }
         }
     </script>
